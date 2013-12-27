@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using WFSample.WebUI.App_Start;
 
 namespace WFSample.WebUI
 {
@@ -16,6 +17,8 @@ namespace WFSample.WebUI
     {
         protected void Application_Start()
         {
+            IoCConfig.Register();
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
