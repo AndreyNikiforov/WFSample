@@ -17,6 +17,8 @@ namespace WFSample.WebUI
     {
         protected void Application_Start()
         {
+            BreezeWebApiConfig.RegisterBreezePreStart();
+
             IoCConfig.Register();
 
             AreaRegistration.RegisterAllAreas();
