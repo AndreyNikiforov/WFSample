@@ -10,12 +10,13 @@
         </div>
     </div>
     <div class="navbar-inner navbar-secondary">
-        <div class="btn-group"
-            data-bind="foreach: router.visibleRoutes">
-            <a data-bind="attr: { href: hash },
-    css: { active: isActive },
-    html: caption"
-                class="btn btn-info"></a>
-        </div>
+            <ul class="nav" data-bind="foreach: router.navigationModel">
+                <li data-bind="css: { active: isActive }">
+                    <a data-bind="attr: { href: hash }, html: title"></a>
+                </li>
+            </ul>
+            <div class="loader pull-right" data-bind="css: { active: router.isNavigating }">
+                <i class="icon-spinner icon-2x icon-spin"></i>
+            </div>
     </div>
 </nav>

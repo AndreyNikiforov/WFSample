@@ -34,8 +34,10 @@
                 null,
                 system.getModuleId(shell),
                 true);
-            router.map(config.routes);
-            return router.activate();
+            return router.map(config.routes)
+                .buildNavigationModel()
+                .mapUnknownRoutes('viewmodels/home', 'not-found')
+                .activate();
         }
     }
 );

@@ -9,24 +9,15 @@
 
     var routes = [
     {
-        route: '',
+        route: '',  //default route
         moduleId: 'viewmodels/home',
         title: 'Home',
         nav: true
     }
-        //,{
-        //url: 'speakers',
-        //moduleId: 'viewmodels/speakers',
-        //name: 'Speakers',
-        //visible: true
-        //}
     ];
-
-    var startModule = 'viewmodels/home';
 
     return {
         imageSettings: imageSettings,
-        routes: routes,
-        startModule: startModule
+        routes: routes
     };
 });
