@@ -5,12 +5,16 @@
         'durandal': '../Scripts/durandal',
         'plugins': '../Scripts/durandal/plugins',
         'transitions': '../Scripts/durandal/transitions',
-        'jquery': '../Scripts/jquery-2.0.3',
-        'knockout': '../Scripts/knockout-3.0.0',
+        //'jquery': '../Scripts/jquery-2.0.3',
+        //'knockout': '../Scripts/knockout-3.0.0',
         'breeze': '../Scripts/breeze.min',
-        'toastr': '../Scripts/toastr',
+        //'toastr': '../Scripts/toastr',
     }
 });
+
+define('knockout', ko);
+define('toastr', toastr);
+define('jquery', function () { return jQuery; });
 
 define(['durandal/system',
     'durandal/app',
